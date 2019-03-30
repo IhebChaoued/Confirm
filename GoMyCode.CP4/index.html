@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+   <html>
+      <head>
+
+        <title>JavaScript</title>
+
+      </head> 
+      
+     
+         <body>
+
+        <button type="button" onclick="Bold()">Bold</button>
+ 
+   <script>
+        function Bold() {
+         if (document.getElementById("a").style.fontWeight == "900")
+         document.getElementById("a").style.fontWeight = "";
+
+      else
+
+         document.getElementById("a").style.fontWeight = "900"   
+      }
+   </script>
+
+
+        <button type="button" onclick="italic()">italic</button>
+
+   <script>
+        function italic() {   
+         if (document.getElementById("a").style.fontStyle == "italic")
+         document.getElementById("a").style.fontStyle = "";
+      
+      else
+      
+         document.getElementById("a").style.fontStyle = "italic";
+      }
+
+   </script>
+
+
+        <button type="button" onclick="underline()">underline</button>
+
+   <script>
+        function underline() {
+         if (document.getElementById("a").style.textDecoration == "underline")
+         document.getElementById("a").style.textDecoration ="";
+
+      else
+             
+         document.getElementById("a").style.textDecoration = "underline"  
+      }
+   </script>
+
+
+        <select id="listfont" onchange="font();">
+        <option value="Helvetica">Helvetica</option>
+        <option value="2" selected="selected">Times New Roman</option>
+        <option value="3">Georgia</option>
+        </select>
+    
+   <script>
+        function font() {
+        var fontFromList = document.getElementById("listfont").options[listfont.selectedIndex].text;
+        document.getElementById("a").style.fontFamily=fontFromList;
+      }
+   </script>
+   
+   <label for="select-choice-1" class="select">Size</label>
+        <select  id="size" onchange="Size();">
+        <option id="1" value="30px">1</option>
+        <option id="2" value="40px">2</option>
+        <option id="3" value="50px">3</option>
+        <option id="4" value="60px">4</option>
+      </select>
+
+        <script>
+                  function Size() {
+                 /* FIRST SIZE */
+                 var x = document.getElementById("size").options[size.selectedIndex].value;
+                  document.getElementById("a").style.fontSize=x;
+                  /*SIZE 2*/
+                  var y = document.getElementById("size").options[size.selectedIndex].value;
+                  document.getElementById("a").style.fontSize=y;
+                  /* SIZE 3 */
+                  var z = document.getElementById("size").options[size.selectedIndex].value;
+                  document.getElementById("a").style.fontSize=z;
+                  /*SIZE 4 */
+                  var w = document.getElementById("size").options[size.selectedIndex].value;
+                  document.getElementById("a").style.fontSize=w;
+                }
+             </script>
+        
+
+
+</select>
+   
+   
+   
+   <script>
+         function inner() {
+   	var x=document.getElementById("b");
+      var y=document.getElementById("a");
+     y.innerHTML =x.value;
+}
+   </script>
+
+         <br>
+         <br>
+         <br>
+ 
+         Text <input style="width=40px;height:50px" id="b" type="text" value=" write your text here">&nbsp;<button onclick="inner()" onclick="Size()">TEST</button>
+       <br><br><p>YOUR MODIFIED TEXT : </p>&nbsp;<p id="a"></p>
+
+
+
+
+         </body>
+   </html>
